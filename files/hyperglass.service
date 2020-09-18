@@ -1,0 +1,15 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description=hyperglass looking glass server
+After=network.target
+Requires=rh-redis5-redis
+
+[Service]
+User=hyperglass
+Group=hyperglass
+WorkingDirectory=/opt/hyperglass
+ExecStart=/opt/hyperglass/virtualenv/bin/python3 /opt/hyperglass/virtualenv/bin/hyperglass start
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

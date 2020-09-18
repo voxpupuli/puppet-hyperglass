@@ -4,3 +4,5 @@
     - set: centos7-64
 spec/spec_helper_acceptance.rb:
   unmanaged: false
+spec/acceptance/nodesets/archlinux-2-x64.yml:
+  delete: true

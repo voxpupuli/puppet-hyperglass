@@ -12,7 +12,6 @@ end
 
 group :test do
   gem 'voxpupuli-test', '~> 2.1',  :require => false
-  gem 'protocol-http2', '0.14.0',  :require => false
   gem 'coveralls',                 :require => false
   gem 'simplecov-console',         :require => false
 end
@@ -26,6 +25,7 @@ end
 
 group :system_tests do
   gem 'voxpupuli-acceptance',  :require => false
+  gem 'irb'
 end
 
 group :release do
