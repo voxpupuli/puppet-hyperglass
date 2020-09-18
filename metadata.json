@@ -1,0 +1,59 @@
+{
+  "name": "puppet-hyperglass",
+  "version": "0.1.0",
+  "author": "Vox Pupuli",
+  "summary": "installs, configures, and manages hyperglass",
+  "license": "AGPL-3.0",
+  "source": "https://github.com/voxpupuli/puppet-hyperglass.git",
+  "project_page": "https://github.com/voxpupuli/puppet-hyperglass",
+  "issues_url": "https://github.com/voxpupuli/puppet-hyperglass/issues",
+  "description": "A puppet module to manage the hyperglass installation as python package. It also installs all related components like nginx, redis, nodejs",
+  "tags": [
+    "network",
+    "bgp",
+    "hyperglass",
+    "lookingglass"
+  ],
+  "dependencies": [
+    {
+      "name": "puppet/nginx",
+      "version_requirement": ">= 2.0.0 < 3.0.0"
+    },
+    {
+      "name": "puppet/redis",
+      "version_requirement": ">= 6.1.0 < 7.0.0"
+    },
+    {
+      "name": "camptocamp/systemd",
+      "version_requirement": ">= 2.10.0 < 3.0.0"
+    },
+    {
+      "name": "puppet/nodejs",
+      "version_requirement": ">= 8.0.0 < 9.0.0"
+    },
+    {
+      "name": "puppet/python",
+      "version_requirement": ">= 4.1.1 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 5.5.8 < 7.0.0"
+    }
+  ]
+}

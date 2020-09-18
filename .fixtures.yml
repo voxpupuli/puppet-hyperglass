@@ -1,0 +1,17 @@
+fixtures:
+  repositories:
+    python: https://github.com/voxpupuli/puppet-python
+    redis: https://github.com/voxpupuli/puppet-redis
+    nodejs: https://github.com/voxpupuli/puppet-nodejs
+    nginx: https://github.com/voxpupuli/puppet-nginx
+    stdlib: https://github.com/puppetlabs/puppetlabs-stdlib
+    epel: https://github.com/voxpupuli/puppet-epel
+    yumrepo_core:
+      repo: https://github.com/puppetlabs/puppetlabs-yumrepo_core
+      puppet_version: ">= 6.0.0"
+    augeas_core:
+      repo: https://github.com/puppetlabs/puppetlabs-augeas_core
+      puppet_version: ">= 6.0.0"
+    systemd:
+      repo: https://github.com/camptocamp/puppet-systemd
+      puppet_version: "< 6.1.0"
