@@ -1,3 +1,8 @@
+#
+# @summary private class that installs all the services hyperglass depends on
+#
+# @author Tim Meusel <tim@bastelfrek.de>
+#
 class hyperglass::server::dependencies {
   assert_private()
 
