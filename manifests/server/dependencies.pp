@@ -10,16 +10,22 @@ class hyperglass::server::dependencies {
     ensure => 'installed',
   }
 
-  class { 'redis::globals':
-    scl => 'rh-redis5',
-  }
-  -> class { 'redis':
-    manage_repo => true,
+  if $facts['os']['release']['major'] == 7 {
+    class { 'redis::globals':
+      scl => 'rh-redis5',
+    }
+    -> class { 'redis':
+      manage_repo => true,
+    }
+    contain redis
+  } else {
+    contain redis
   }
 
   class { 'nodejs':
     repo_url_suffix => '14.x',
   }
+  contain nodejs
 
   yumrepo { 'yarn':
     ensure   => 'present',
