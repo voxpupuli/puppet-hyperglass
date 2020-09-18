@@ -1,7 +1,7 @@
 class hyperglass::server::dependencies {
   assert_private()
 
-  package { ['python3-pip', 'python3-devel']:
+  package { ['python3-pip', 'python3-devel', 'gcc']:
     ensure => 'installed',
   }
 
@@ -28,4 +28,6 @@ class hyperglass::server::dependencies {
     ensure  => 'present',
     require => Yumrepo['yarn'],
   }
+
+  include nginx
 }
