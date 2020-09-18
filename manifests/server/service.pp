@@ -1,3 +1,8 @@
+# @summary manages the hyperglass service + unit file
+#
+# @api private
+#
+# @author Tim Meusel <tim@bastelfrek.de>
 class hyperglass::server::service {
   assert_private()
   systemd::unit_file { 'hyperglass.service':
