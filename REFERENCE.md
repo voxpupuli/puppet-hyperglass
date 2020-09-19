@@ -13,6 +13,12 @@
 
 #### Private Classes
 
+* `hyperglass::agent::config`: configures the hyperglass looking agent
+* `hyperglass::agent::install`: installs the hyperglass agent on linux nodes
+* `hyperglass::agent::service`: manages the hyperglass agent service + unit file
+* `hyperglass::gcc`: module to workaround the broken puppetlabs/gcc class. Installs just gcc
+* `hyperglass::hyperglassdir`: private class to create the main dir for hyperglass server and agent
+* `hyperglass::python`: private class used by server/agent to install python3
 * `hyperglass::server::config`: writes the hyperglass config files
 * `hyperglass::server::dependencies`: private class that installs all the services hyperglass depends on
 * `hyperglass::server::install`: installs the hyperglass server
@@ -26,6 +32,42 @@ installs the hyperglass linux agent
 
 * **See also**
   * https://github.com/checktheroads/hyperglass-agent
+
+#### Parameters
+
+The following parameters are available in the `hyperglass::agent` class.
+
+##### `manage_python`
+
+Data type: `Boolean`
+
+installs python3
+
+Default value: ``true``
+
+##### `manage_gcc`
+
+Data type: `Boolean`
+
+installs gcc
+
+Default value: ``true``
+
+##### `data`
+
+Data type: `Hash`
+
+generic hyperglass configuration hash.
+
+Default value: `{
+    'debug'          => true,
+    'listen_address' => '127.0.0.1',
+    'mode'           => 'bird',
+    'secret'         => fqdn_rand_string(20),
+    'ssl'            => {
+      'enable' => false,
+    },
+  }`
 
 ### `hyperglass::server`
 
@@ -43,6 +85,22 @@ The following parameters are available in the `hyperglass::server` class.
 Data type: `Boolean`
 
 if true, installs all other services that hyperglass requires, like redis, yarn, nginx, python
+
+Default value: ``true``
+
+##### `manage_python`
+
+Data type: `Boolean`
+
+installs python3
+
+Default value: ``true``
+
+##### `manage_gcc`
+
+Data type: `Boolean`
+
+installs gcc
 
 Default value: ``true``
 

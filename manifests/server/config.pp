@@ -6,27 +6,27 @@
 #
 # @api private
 #
-# @author Tim Meusel <tim@bastelfrek.de>
+# @author Tim Meusel <tim@bastelfreak.de>
 class hyperglass::server::config (
   Hash $devices  = $hyperglass::server::devices,
   Hash $data     = $hyperglass::server::data,
   Hash $commands = $hyperglass::server::commands,
 ) {
   assert_private()
-  file { '/opt/hyperglass/hyperglass/hyperglass.yaml':
+  file { '/opt/hyperglass/hyperglass-server/hyperglass/hyperglass.yaml':
     ensure  => 'file',
     owner   => 'hyperglass',
     group   => 'hyperglass',
     content => to_yaml($data),
   }
-  file { '/opt/hyperglass/hyperglass/commands.yaml':
+  file { '/opt/hyperglass/hyperglass-server/hyperglass/commands.yaml':
     ensure  => 'file',
     owner   => 'hyperglass',
     group   => 'hyperglass',
     content => to_yaml($commands),
   }
 
-  file { '/opt/hyperglass/hyperglass/devices.yaml':
+  file { '/opt/hyperglass/hyperglass-server/hyperglass/devices.yaml':
     ensure  => 'file',
     owner   => 'hyperglass',
     group   => 'hyperglass',

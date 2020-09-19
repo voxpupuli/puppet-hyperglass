@@ -19,15 +19,15 @@ describe 'hyperglass::server' do
         it { is_expected.to contain_class('Hyperglass::Server::Dependencies') }
         it { is_expected.to contain_class('Hyperglass::Server::Install') }
         it { is_expected.to contain_class('Hyperglass::Server::Service') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/commands.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/devices.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/hyperglass.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/static/custom').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/static/images/favicons').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/static/images').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/static/ui').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass/static').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
-        it { is_expected.to contain_file('/opt/hyperglass/hyperglass').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/commands.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/devices.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/hyperglass.yaml').with_ensure('file').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/static/custom').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/static/images/favicons').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/static/images').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/static/ui').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass/static').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
+        it { is_expected.to contain_file('/opt/hyperglass/hyperglass-server/hyperglass').with_ensure('directory').with_owner('hyperglass').with_group('hyperglass') }
       end
     end
   end

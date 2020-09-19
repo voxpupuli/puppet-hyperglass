@@ -1,0 +1,14 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description=hyperglass looking glass agent
+After=network.target
+
+[Service]
+User=hyperglass-agent
+Group=hyperglass-agent
+WorkingDirectory=/opt/hyperglass/hyperglass-agent
+ExecStart=/opt/hyperglass/hyperglass-agent/virtualenv/bin/python3 /opt/hyperglass/hyperglass-agent/virtualenv/bin/hyperglass-agent start
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
