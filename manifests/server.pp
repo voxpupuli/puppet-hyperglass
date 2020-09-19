@@ -41,7 +41,7 @@ class hyperglass::server (
     ],
   },
 ) {
-  unless $facts['os']['name'] in ['CentOS', 'RedHat'] {
+  unless $facts['os']['name'] in ['CentOS', 'RedHat', 'VirtuozzoLinux'] {
     fail('the hyperglass::server class currently only works on CentOS/RedHat')
   }
 
