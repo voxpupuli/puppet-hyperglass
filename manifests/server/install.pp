@@ -1,3 +1,8 @@
+# @summary installs the hyperglass server
+#
+# @api private
+#
+# @author Tim Meusel <tim@bastelfrek.de>
 class hyperglass::server::install {
   assert_private()
   user { 'hyperglass':
