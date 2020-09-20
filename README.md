@@ -68,6 +68,16 @@ Please take a look at the official
 It explains the three different options very well. You can pass the hashes
 from the documentation 1:1 to the three parameters.
 
+### Beginning with Hyperglass
+
+This module provides Vagrant definitions that can be used to get started
+with Hyperglass. The following will produce VM's for a Hyperglass server
+and an agent.
+
+```bash
+vagrant up
+```
+
 ## Tests
 
 This module has several unit tests and linters configured. You can execute them
