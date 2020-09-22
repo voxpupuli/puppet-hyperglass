@@ -66,7 +66,7 @@ Please take a look at the official
 [hyperglass documentation](https://hyperglass.io/docs/parameters).
 
 It explains the three different options very well. You can pass the hashes
-from the documentation 1:1 to the tree parameters.
+from the documentation 1:1 to the three parameters.
 
 ## Tests
 
