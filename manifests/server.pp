@@ -1,15 +1,19 @@
 # @summary installs the hyperglass looking glass
 #
 # @param manage_depended_services if true, installs all other services that hyperglass requires, like redis, yarn, nginx, python
+# @param manage_python installs python3
+# @param manage_gcc installs gcc
 # @param devices hash containing all the devices hyperglass can connect to. Defaults to demo data so the service starts properly.
 # @param commands specific commands that can be used by the devices
 # @param data generic hyperglass configuration hash.
 #
 # @see https://hyperglass.io/
 #
-# @author Tim Meusel <tim@bastelfrek.de>
+# @author Tim Meusel <tim@bastelfreak.de>
 class hyperglass::server (
   Boolean $manage_depended_services = true,
+  Boolean $manage_python            = true,
+  Boolean $manage_gcc               = true,
   Hash $data                        = {},
   Hash $commands                    = {},
   Hash $devices                     = {
@@ -46,11 +50,10 @@ class hyperglass::server (
   }
 
   if $manage_depended_services {
-    contain hyperglass::server::dependencies
-    Class['hyperglass::server::dependencies']
-    -> Class['hyperglass::server::install']
+    require hyperglass::server::dependencies
   }
 
+  require hyperglass::hyperglassdir
   contain hyperglass::server::install
   contain hyperglass::server::config
   contain hyperglass::server::service

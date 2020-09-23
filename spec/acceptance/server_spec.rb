@@ -6,11 +6,13 @@ describe 'hyperglass::server class' do
     it 'works with no errors' do
       pp = 'include hyperglass::server'
 
-      # Run it three times and test for idempotency
-      # redis dependency needs two run twice to start properly on selinux nodes
-      # selinux is only enabled in vagrant images, not docker
+      # Run it twice and test for idempotency
       apply_manifest(pp, catch_failures: true)
-      apply_manifest(pp, catch_failures: true)
+      if fact('selinux') == true
+        # redis dependency needs two runs to start properly on selinux nodes
+        # https://tickets.puppetlabs.com/browse/PUP-10548
+        apply_manifest(pp, catch_failures: true)
+      end
       apply_manifest(pp, catch_changes: true)
     end
 

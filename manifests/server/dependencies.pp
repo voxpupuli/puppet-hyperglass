@@ -2,14 +2,19 @@
 #
 # @api private
 #
-# @author Tim Meusel <tim@bastelfrek.de>
-class hyperglass::server::dependencies {
+# @author Tim Meusel <tim@bastelfreak.de>
+class hyperglass::server::dependencies (
+  Boolean $manage_python = $hyperglass::server::manage_python,
+  Boolean $manage_gcc    = $hyperglass::server::manage_gcc,
+) {
   assert_private()
 
-  package { ['python3-pip', 'python3-devel', 'gcc']:
-    ensure => 'installed',
+  if $manage_python {
+    require hyperglass::python
   }
-
+  if $manage_gcc {
+    require hyperglass::gcc
+  }
   class { 'redis::globals':
     scl => 'rh-redis5',
   }

@@ -2,13 +2,13 @@
 [Unit]
 Description=hyperglass looking glass server
 After=network.target
-Requires=rh-redis5-redis
+Requires=rh-redis5-redis.service
 
 [Service]
 User=hyperglass
 Group=hyperglass
-WorkingDirectory=/opt/hyperglass
-ExecStart=/opt/hyperglass/virtualenv/bin/python3 /opt/hyperglass/virtualenv/bin/hyperglass start
+WorkingDirectory=/opt/hyperglass/hyperglass-server
+ExecStart=/opt/hyperglass/hyperglass-server/virtualenv/bin/python3 /opt/hyperglass/hyperglass-server/virtualenv/bin/hyperglass start
 PrivateTmp=true
 
 [Install]
