@@ -37,7 +37,7 @@ describe 'hyperglass::agent class' do
     end
 
     describe port(8080) do
-      it { is_expected.to be_listening.with('tcp') }
+      it { is_expected.to be_listening.on('127.0.0.1').with('tcp') }
     end
   end
 end
