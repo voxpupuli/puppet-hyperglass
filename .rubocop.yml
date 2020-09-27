@@ -1,2 +1,4 @@
+Style/TrailingCommaInLiteral:
+  Enabled: false
 inherit_gem:
   voxpupuli-test: rubocop.yml

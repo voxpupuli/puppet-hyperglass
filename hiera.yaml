@@ -1,0 +1,11 @@
+---
+version: 5
+defaults:
+  datadir: data
+  data_hash: yaml_data
+hierarchy:
+  - name: "Acceptance testing with Beaker"
+    path: "beaker/%{facts.beaker}.yaml"
+  - name: "common"
+    path: "common.yaml"
+

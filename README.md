@@ -62,6 +62,43 @@ class { 'hyperglass::server':
 }
 ```
 
+An example showing devices populated.
+
+```puppet
+class { 'hyperglass::server':
+  data     => {...},
+  commands => {...},
+  devices  => {
+    'routers' => [
+      {
+        'name'         => 'atl_router01',
+        'address'      => '10.0.0.2',
+        'network'      => {
+          'name'         => 'secondary',
+          'display_name' => 'That Other Network',
+        },
+        'credential'   => {
+          'username' => 'user2',
+          'password' => ' secret2',
+        },
+        'display_name' => 'Atlanta, GA',
+        'port'         => 22,
+        'nos'          => 'juniper',
+        'vrfs'         => [
+          {
+            'name'         => 'default',
+            'display_name' => 'Global',
+            'ipv4'         => {
+              'source_address' => '192.0.2.2',
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+```
+
 Please take a look at the official
 [hyperglass documentation](https://hyperglass.io/docs/parameters).
 
