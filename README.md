@@ -62,11 +62,58 @@ class { 'hyperglass::server':
 }
 ```
 
+An example showing devices populated.
+
+```puppet
+class { 'hyperglass::server':
+  data     => {...},
+  commands => {...},
+  devices  => {
+    'routers' => [
+      {
+        'name'         => 'atl_router01',
+        'address'      => '10.0.0.2',
+        'network'      => {
+          'name'         => 'secondary',
+          'display_name' => 'That Other Network',
+        },
+        'credential'   => {
+          'username' => 'user2',
+          'password' => ' secret2',
+        },
+        'display_name' => 'Atlanta, GA',
+        'port'         => 22,
+        'nos'          => 'juniper',
+        'vrfs'         => [
+          {
+            'name'         => 'default',
+            'display_name' => 'Global',
+            'ipv4'         => {
+              'source_address' => '192.0.2.2',
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+```
+
 Please take a look at the official
 [hyperglass documentation](https://hyperglass.io/docs/parameters).
 
 It explains the three different options very well. You can pass the hashes
 from the documentation 1:1 to the three parameters.
+
+### Beginning with Hyperglass
+
+This module provides Vagrant definitions that can be used to get started
+with Hyperglass. The following will produce VM's for a Hyperglass server
+and an agent.
+
+```bash
+vagrant up
+```
 
 ## Tests
 
