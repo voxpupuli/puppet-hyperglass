@@ -25,7 +25,6 @@ end
 
 group :system_tests do
   gem 'voxpupuli-acceptance',  :require => false
-  gem 'irb'
 end
 
 group :release do
