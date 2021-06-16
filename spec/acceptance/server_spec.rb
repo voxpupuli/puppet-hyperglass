@@ -21,6 +21,11 @@ describe 'hyperglass::server class' do
       it { is_expected.to be_enabled }
     end
 
+    describe service('nginx') do
+      it { is_expected.to be_running }
+      it { is_expected.to be_enabled }
+    end
+
     # This sleeps because hyperglass can take a long time to start. The service
     # check above returns successfully as the service is running though it has
     # not even bound to a port.
