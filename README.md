@@ -1,6 +1,6 @@
 # puppet-hyperglass
 
-[![Build Status](https://travis-ci.com/voxpupuli/puppet-hyperglass.svg?branch=master)](https://travis-ci.com/voxpupuli/puppet-hyperglass)
+[![CI](https://github.com/voxpupuli/puppet-hyperglass/actions/workflows/ci.yml/badge.svg)](https://github.com/voxpupuli/puppet-hyperglass/actions/workflows/ci.yml)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/hyperglass.svg)](https://forge.puppetlabs.com/puppet/hyperglass)
 [![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/hyperglass.svg)](https://forge.puppetlabs.com/puppet/hyperglass)
 [![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/hyperglass.svg)](https://forge.puppetlabs.com/puppet/hyperglass)
