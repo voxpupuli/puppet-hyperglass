@@ -26,7 +26,7 @@
 
 ## Classes
 
-### `hyperglass::agent`
+### <a name="hyperglassagent"></a>`hyperglass::agent`
 
 installs the hyperglass linux agent
 
@@ -35,9 +35,13 @@ installs the hyperglass linux agent
 
 #### Parameters
 
-The following parameters are available in the `hyperglass::agent` class.
+The following parameters are available in the `hyperglass::agent` class:
 
-##### `manage_python`
+* [`manage_python`](#manage_python)
+* [`manage_gcc`](#manage_gcc)
+* [`data`](#data)
+
+##### <a name="manage_python"></a>`manage_python`
 
 Data type: `Boolean`
 
@@ -45,7 +49,7 @@ installs python3
 
 Default value: ``true``
 
-##### `manage_gcc`
+##### <a name="manage_gcc"></a>`manage_gcc`
 
 Data type: `Boolean`
 
@@ -53,7 +57,7 @@ installs gcc
 
 Default value: ``true``
 
-##### `data`
+##### <a name="data"></a>`data`
 
 Data type: `Hash`
 
@@ -69,7 +73,7 @@ Default value: `{
     },
   }`
 
-### `hyperglass::server`
+### <a name="hyperglassserver"></a>`hyperglass::server`
 
 installs the hyperglass looking glass
 
@@ -78,9 +82,16 @@ installs the hyperglass looking glass
 
 #### Parameters
 
-The following parameters are available in the `hyperglass::server` class.
+The following parameters are available in the `hyperglass::server` class:
 
-##### `manage_depended_services`
+* [`manage_depended_services`](#manage_depended_services)
+* [`manage_python`](#manage_python)
+* [`manage_gcc`](#manage_gcc)
+* [`devices`](#devices)
+* [`commands`](#commands)
+* [`data`](#data)
+
+##### <a name="manage_depended_services"></a>`manage_depended_services`
 
 Data type: `Boolean`
 
@@ -88,7 +99,7 @@ if true, installs all other services that hyperglass requires, like redis, yarn,
 
 Default value: ``true``
 
-##### `manage_python`
+##### <a name="manage_python"></a>`manage_python`
 
 Data type: `Boolean`
 
@@ -96,7 +107,7 @@ installs python3
 
 Default value: ``true``
 
-##### `manage_gcc`
+##### <a name="manage_gcc"></a>`manage_gcc`
 
 Data type: `Boolean`
 
@@ -104,7 +115,7 @@ installs gcc
 
 Default value: ``true``
 
-##### `devices`
+##### <a name="devices"></a>`devices`
 
 Data type: `Hash`
 
@@ -139,7 +150,7 @@ Default value: `{
     ],
   }`
 
-##### `commands`
+##### <a name="commands"></a>`commands`
 
 Data type: `Hash`
 
@@ -147,7 +158,7 @@ specific commands that can be used by the devices
 
 Default value: `{}`
 
-##### `data`
+##### <a name="data"></a>`data`
 
 Data type: `Hash`
 
