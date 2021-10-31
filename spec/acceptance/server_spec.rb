@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper_acceptance'
 
 describe 'hyperglass::server class' do
@@ -16,12 +18,7 @@ describe 'hyperglass::server class' do
       apply_manifest(pp, catch_changes: true)
     end
 
-    describe service('hyperglass') do
-      it { is_expected.to be_running }
-      it { is_expected.to be_enabled }
-    end
-
-    describe service('nginx') do
+    describe service('hyperglass') && service('nginx') do
       it { is_expected.to be_running }
       it { is_expected.to be_enabled }
     end
@@ -29,7 +26,7 @@ describe 'hyperglass::server class' do
     # This sleeps because hyperglass can take a long time to start. The service
     # check above returns successfully as the service is running though it has
     # not even bound to a port.
-    describe command('sleep 150; curl http://localhost:8001') do
+    describe command('sleep 180; curl http://localhost:8001') do
       its(:stdout) { is_expected.to match %r{hyperglass} }
     end
   end
