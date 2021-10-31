@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper_acceptance'
 
 describe 'hyperglass::server class' do
@@ -16,12 +18,7 @@ describe 'hyperglass::server class' do
       apply_manifest(pp, catch_changes: true)
     end
 
-    describe service('hyperglass') do
-      it { is_expected.to be_running }
-      it { is_expected.to be_enabled }
-    end
-
-    describe service('nginx') do
+    describe service('hyperglass') && service('nginx') do
       it { is_expected.to be_running }
       it { is_expected.to be_enabled }
     end

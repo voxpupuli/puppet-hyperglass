@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'hyperglass::server' do
@@ -6,7 +8,7 @@ describe 'hyperglass::server' do
   end
 
   on_supported_os.each do |os, facts|
-    context "on #{os} " do
+    context "on #{os}" do
       let :facts do
         facts.merge(
           python3_version: '3.6.8'
