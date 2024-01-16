@@ -8,8 +8,8 @@
 
 #### Public Classes
 
-* [`hyperglass::agent`](#hyperglassagent): installs the hyperglass linux agent
-* [`hyperglass::server`](#hyperglassserver): installs the hyperglass looking glass
+* [`hyperglass::agent`](#hyperglass--agent): installs the hyperglass linux agent
+* [`hyperglass::server`](#hyperglass--server): installs the hyperglass looking glass
 
 #### Private Classes
 
@@ -26,7 +26,7 @@
 
 ## Classes
 
-### <a name="hyperglassagent"></a>`hyperglass::agent`
+### <a name="hyperglass--agent"></a>`hyperglass::agent`
 
 installs the hyperglass linux agent
 
@@ -37,33 +37,36 @@ installs the hyperglass linux agent
 
 The following parameters are available in the `hyperglass::agent` class:
 
-* [`manage_python`](#manage_python)
-* [`manage_gcc`](#manage_gcc)
-* [`data`](#data)
+* [`manage_python`](#-hyperglass--agent--manage_python)
+* [`manage_gcc`](#-hyperglass--agent--manage_gcc)
+* [`data`](#-hyperglass--agent--data)
 
-##### <a name="manage_python"></a>`manage_python`
+##### <a name="-hyperglass--agent--manage_python"></a>`manage_python`
 
 Data type: `Boolean`
 
 installs python3
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="manage_gcc"></a>`manage_gcc`
+##### <a name="-hyperglass--agent--manage_gcc"></a>`manage_gcc`
 
 Data type: `Boolean`
 
 installs gcc
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="data"></a>`data`
+##### <a name="-hyperglass--agent--data"></a>`data`
 
 Data type: `Hash`
 
 generic hyperglass configuration hash.
 
-Default value: `{
+Default value:
+
+```puppet
+{
     'debug'          => true,
     'listen_address' => '127.0.0.1',
     'mode'           => 'bird',
@@ -71,9 +74,10 @@ Default value: `{
     'ssl'            => {
       'enable' => false,
     },
-  }`
+  }
+```
 
-### <a name="hyperglassserver"></a>`hyperglass::server`
+### <a name="hyperglass--server"></a>`hyperglass::server`
 
 installs the hyperglass looking glass
 
@@ -84,44 +88,47 @@ installs the hyperglass looking glass
 
 The following parameters are available in the `hyperglass::server` class:
 
-* [`manage_depended_services`](#manage_depended_services)
-* [`manage_python`](#manage_python)
-* [`manage_gcc`](#manage_gcc)
-* [`devices`](#devices)
-* [`commands`](#commands)
-* [`data`](#data)
+* [`manage_depended_services`](#-hyperglass--server--manage_depended_services)
+* [`manage_python`](#-hyperglass--server--manage_python)
+* [`manage_gcc`](#-hyperglass--server--manage_gcc)
+* [`devices`](#-hyperglass--server--devices)
+* [`commands`](#-hyperglass--server--commands)
+* [`data`](#-hyperglass--server--data)
 
-##### <a name="manage_depended_services"></a>`manage_depended_services`
+##### <a name="-hyperglass--server--manage_depended_services"></a>`manage_depended_services`
 
 Data type: `Boolean`
 
 if true, installs all other services that hyperglass requires, like redis, yarn, nginx, python
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="manage_python"></a>`manage_python`
+##### <a name="-hyperglass--server--manage_python"></a>`manage_python`
 
 Data type: `Boolean`
 
 installs python3
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="manage_gcc"></a>`manage_gcc`
+##### <a name="-hyperglass--server--manage_gcc"></a>`manage_gcc`
 
 Data type: `Boolean`
 
 installs gcc
 
-Default value: ``true``
+Default value: `true`
 
-##### <a name="devices"></a>`devices`
+##### <a name="-hyperglass--server--devices"></a>`devices`
 
 Data type: `Hash`
 
 hash containing all the devices hyperglass can connect to. Defaults to demo data so the service starts properly.
 
-Default value: `{
+Default value:
+
+```puppet
+{
     'routers' => [
       {
         'name' => 'atl_router01',
@@ -148,9 +155,10 @@ Default value: `{
         ],
       },
     ],
-  }`
+  }
+```
 
-##### <a name="commands"></a>`commands`
+##### <a name="-hyperglass--server--commands"></a>`commands`
 
 Data type: `Hash`
 
@@ -158,7 +166,7 @@ specific commands that can be used by the devices
 
 Default value: `{}`
 
-##### <a name="data"></a>`data`
+##### <a name="-hyperglass--server--data"></a>`data`
 
 Data type: `Hash`
 

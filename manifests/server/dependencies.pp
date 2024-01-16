@@ -22,9 +22,7 @@ class hyperglass::server::dependencies (
     manage_repo => true,
   }
 
-  class { 'nodejs':
-    repo_url_suffix => '14.x',
-  }
+  include nodejs
 
   yumrepo { 'yarn':
     ensure   => 'present',
