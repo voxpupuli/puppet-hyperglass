@@ -22,7 +22,7 @@ class hyperglass::server::dependencies (
     manage_repo => true,
   }
 
-  class { 'nodejs':}
+  class { 'nodejs': }
 
   yumrepo { 'yarn':
     ensure   => 'present',
