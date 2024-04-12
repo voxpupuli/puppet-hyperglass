@@ -54,6 +54,12 @@
       ]
     },
     {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "20.04"
+      ]
+    },
+    {
       "operatingsystem": "VirtuozzoLinux",
       "operatingsystemrelease": [
         "7"
