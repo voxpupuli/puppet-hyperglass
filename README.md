@@ -1,3 +1,11 @@
+
+> [!IMPORTANT]
+> This module has been archived on 2025-08-16 (See discussion in [#47](https://github.com/voxpupuli/puppet-hyperglass/issues/47)).
+
+
+> [!IMPORTANT]
+> This module has been archived on 2025-08-16 (See discussion in [#47](https://github.com/voxpupuli/puppet-hyperglass/issues/47)).
+
 # puppet-hyperglass
 
 [![CI](https://github.com/voxpupuli/puppet-hyperglass/actions/workflows/ci.yml/badge.svg)](https://github.com/voxpupuli/puppet-hyperglass/actions/workflows/ci.yml)
