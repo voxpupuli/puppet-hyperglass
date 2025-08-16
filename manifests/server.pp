@@ -7,7 +7,7 @@
 # @param commands specific commands that can be used by the devices
 # @param data generic hyperglass configuration hash.
 #
-# @see https://hyperglass.io/
+# @see https://hyperglass.dev/
 #
 # @author Tim Meusel <tim@bastelfreak.de>
 class hyperglass::server (

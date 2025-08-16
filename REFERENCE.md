@@ -82,7 +82,7 @@ Default value:
 installs the hyperglass looking glass
 
 * **See also**
-  * https://hyperglass.io/
+  * https://hyperglass.dev/
 
 #### Parameters
 
