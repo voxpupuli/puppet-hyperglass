@@ -18,7 +18,7 @@
 
 ## Hyperglass Setup
 
-[Hyperglass](https://hyperglass.io/) is shipped as a
+[Hyperglass](https://hyperglass.dev/) is shipped as a
 [python package](https://pypi.org/project/hyperglass/). This Puppet module
 can install all the required services:
 
