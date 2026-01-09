@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v2.0.0](https://github.com/voxpupuli/puppet-hyperglass/tree/v2.0.0) (2025-12-16)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hyperglass/compare/v1.0.0...v2.0.0)
+
+**Breaking changes:**
+
+- Drop puppet, update openvox minimum version to 8.19 [\#54](https://github.com/voxpupuli/puppet-hyperglass/pull/54) ([TheMeier](https://github.com/TheMeier))
+- Drop Puppet 6 support [\#39](https://github.com/voxpupuli/puppet-hyperglass/pull/39) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- puppet/nginx Allow 7.x, puppet/redis Allow 11.x, puppet/systemd Allow 8.x, puppet/nodejs Allow 11.x, puppetlabs/stdlib Allow 9.x, puppet/python Allow 8.0 [\#53](https://github.com/voxpupuli/puppet-hyperglass/pull/53) ([TheMeier](https://github.com/TheMeier))
+- bump puppet/systemd to \< 5.0.0 [\#37](https://github.com/voxpupuli/puppet-hyperglass/pull/37) ([jhoblitt](https://github.com/jhoblitt))
+
+**Merged pull requests:**
+
+- Update hyperglass website address [\#56](https://github.com/voxpupuli/puppet-hyperglass/pull/56) ([kenyon](https://github.com/kenyon))
+- remove non-existing parameter from nodejs class [\#43](https://github.com/voxpupuli/puppet-hyperglass/pull/43) ([zilchms](https://github.com/zilchms))
+- add puppet-lint-param-docs [\#30](https://github.com/voxpupuli/puppet-hyperglass/pull/30) ([bastelfreak](https://github.com/bastelfreak))
+- Allow up-to-date dependencies [\#28](https://github.com/voxpupuli/puppet-hyperglass/pull/28) ([smortex](https://github.com/smortex))
+- switch from camptocamp/systemd to voxpupuli/systemd / allow puppet/redis 8.x [\#27](https://github.com/voxpupuli/puppet-hyperglass/pull/27) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v1.0.0](https://github.com/voxpupuli/puppet-hyperglass/tree/v1.0.0) (2021-06-17)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-hyperglass/compare/60b781f2aa5d8eb10bb3a40c1b7690abfe14e111...v1.0.0)
@@ -21,6 +43,7 @@ These should not affect the functionality of the module.
 
 **Merged pull requests:**
 
+- release 1.0.0 [\#26](https://github.com/voxpupuli/puppet-hyperglass/pull/26) ([bastelfreak](https://github.com/bastelfreak))
 - puppet/python: Allow 5.x and 6.x [\#25](https://github.com/voxpupuli/puppet-hyperglass/pull/25) ([bastelfreak](https://github.com/bastelfreak))
 - puppetlabs/stdlib: Allow 7.x [\#24](https://github.com/voxpupuli/puppet-hyperglass/pull/24) ([bastelfreak](https://github.com/bastelfreak))
 - puppet/nodejs: Allow 9.x [\#23](https://github.com/voxpupuli/puppet-hyperglass/pull/23) ([bastelfreak](https://github.com/bastelfreak))
