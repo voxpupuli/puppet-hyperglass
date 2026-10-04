@@ -11,7 +11,7 @@ describe 'hyperglass::server' do
     context "on #{os}" do
       let :facts do
         facts.merge(
-          python3_version: '3.6.8'
+          python3_version: '3.6.8',
         )
       end
 
