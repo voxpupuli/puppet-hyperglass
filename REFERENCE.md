@@ -173,4 +173,3 @@ Data type: `Hash`
 generic hyperglass configuration hash.
 
 Default value: `{}`
-
